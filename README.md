@@ -10,5 +10,4 @@
 ```
 
 - para configurar a geração de uma imagem nativa e executá-la, seguir os passar [deste site](https://quarkus.io/guides/building-native-image)
-
-
+- ao usar `quarkus:dev` é habilitado o `live coding`
