@@ -12,7 +12,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 import io.github.mateusalxd.model.Bitcoin;
 
 @Path("/bitcoins")
-@RegisterRestClient
+@RegisterRestClient(configKey = "bitcoin-api")
 public interface BitcoinService {
 
 	@GET
