@@ -1,4 +1,4 @@
-package org.acme.resteasy;
+package io.github.mateusalxd;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
