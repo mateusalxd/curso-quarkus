@@ -8,3 +8,7 @@
 ```bash
 ./mvnw compile quarkus:dev
 ```
+
+- para configurar a geração de uma imagem nativa e executá-la, seguir os passar [deste site](https://quarkus.io/guides/building-native-image)
+
+
