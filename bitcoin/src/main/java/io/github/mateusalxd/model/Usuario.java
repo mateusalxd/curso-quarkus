@@ -1,5 +1,6 @@
 package io.github.mateusalxd.model;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -53,10 +54,15 @@ public class Usuario extends PanacheEntityBase {
 		this.role = role;
 	}
 
+	public String getNome() {
+		return nome;
+	}
+
 	public String getUsername() {
 		return username;
 	}
 
+	@JsonbTransient
 	public String getPassword() {
 		return password;
 	}

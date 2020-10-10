@@ -1,6 +1,7 @@
 package io.github.mateusalxd.service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -15,7 +16,7 @@ import io.github.mateusalxd.repository.OrdemRepository;
 public class OrdemService {
 
 	@Inject
-	private OrdemRepository ordemRepository;
+	OrdemRepository ordemRepository;
 
 	public void inserir(SecurityContext seguranca, Ordem ordem) {
 		Optional<Usuario> usuarioOpcional = Usuario.findByIdOptional(ordem.getUserId());
@@ -26,6 +27,10 @@ public class OrdemService {
 		ordem.setData(LocalDate.now());
 		ordem.setStatus("ENVIADA");
 		ordemRepository.persist(ordem);
+	}
+
+	public List<Ordem> listar() {
+		return ordemRepository.listAll();
 	}
 
 }

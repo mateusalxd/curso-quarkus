@@ -2,6 +2,7 @@ package io.github.mateusalxd.model;
 
 import java.time.LocalDate;
 
+import javax.json.bind.annotation.JsonbTransient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -46,8 +47,25 @@ public class Ordem {
 		this.userId = userId;
 	}
 
+	@JsonbTransient
 	public Long getUserId() {
 		return userId;
+	}
+
+	public Double getPreco() {
+		return preco;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public LocalDate getData() {
+		return data;
+	}
+
+	public String getStatus() {
+		return status;
 	}
 
 }
