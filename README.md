@@ -27,6 +27,7 @@ CREATE TABLE `Usuario` (
 	`cpf` VARCHAR(14) NOT NULL,
 	`username` VARCHAR(50) NOT NULL,
 	`password` VARCHAR(100) NOT NULL,
+	`role` VARCHAR(55),
 	PRIMARY KEY(`id`)) ENGINE=InnoDB;
 
 CREATE TABLE `Ordem` (
